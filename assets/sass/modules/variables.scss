@@ -8,13 +8,15 @@
 
 // Colours
 
-$color-primary: #000;
+
 
 //Black
-$black: #000;
+$deepblack: #000;
+$black: #121212;
 $medium-black: #1d1d1d;
 $darker-gray: #272727;
 $dark-gray:#101010;
+$gray: #454545;
 $medium-gray: #888;
 $light-gray: #d1d1d1;
 
@@ -74,6 +76,7 @@ $text-cap: capitalize;
 $text-lower: lowercase;
 $text-upper: uppercase;
 $text-none: none;
+
 //Transitions
 $base-transition:  all .15s linear;
 $var-base-transition:   .15s linear;
