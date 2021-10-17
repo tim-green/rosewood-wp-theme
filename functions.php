@@ -541,3 +541,17 @@ $theme_version = '1.0.0';
 		}
 	}
 	add_action( 'wp_enqueue_scripts', 'themes_starter_scripts_loader' );
+	/**
+	 * Filter no-js class
+	 *
+	 * @since v1.0
+	 */
+
+	if ( ! function_exists( 'rosewood_has_js' ) ) {
+		function rosewood_has_js() {
+			?>
+			<script>jQuery( 'html' ).removeClass( 'no-js' ).addClass( 'js' );</script>
+			<?php
+		}
+	}
+	add_action( 'wp_head', 'rosewood_has_js' );
