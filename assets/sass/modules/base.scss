@@ -28,4 +28,9 @@ body{
     -moz-osx-font-smoothing: grayscale;
   }
 }
+
+::selection{
+  background: $black;
+  color: $white;
+}
 }
