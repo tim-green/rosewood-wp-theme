@@ -39,8 +39,8 @@ $theme_version = '1.0.0';
 	 *
 	 * @since v1.0
 	 */
-	if ( ! function_exists( 'themes_starter_setup_theme' ) ) :
-		function themes_starter_setup_theme() {
+	if ( ! function_exists( 'rosewood_setup' ) ) :
+		function rosewood_setup() {
 
 			// Make theme available for translation: Translations can be filed in the /languages/ directory
 			load_theme_textdomain( 'my-theme', get_template_directory() . '/languages' );
@@ -75,8 +75,14 @@ $theme_version = '1.0.0';
 			add_filter( 'use_default_gallery_style', '__return_false' );
 
 		}
-		add_action( 'after_setup_theme', 'themes_starter_setup_theme' );
+		add_action( 'after_setup_theme', 'rosewood_setup' );
 	endif;
+
+	/**
+	 * Included files
+	 *
+	 * @since v1.0
+	 */
 
 
 	/**
