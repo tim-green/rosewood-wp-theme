@@ -78,4 +78,20 @@ dd, dt{
 dt{
   font-weight: 700;
 }
+
+//code
+
+code{
+  background: $cream;
+  padding: 0 1px;
+}
+
+pre{
+  background: $cream;
+  @include fontSize(14px);
+  line-height: 1.5;
+  padding: 20px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
 }
