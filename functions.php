@@ -53,6 +53,9 @@ $theme_version = '1.0.0';
 				'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
 			) );
 			
+			//Post thumbnails size
+			set_post_thumbnail_size(1200, 9999);
+			
 			// Custom image sizes
 			add_image_size( 'rosewood_preview-image', 600, 9999 );
 
