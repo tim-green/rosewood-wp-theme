@@ -33,4 +33,31 @@ body{
   background: $black;
   color: $white;
 }
+
+a{
+  color: inherit;;
+  text-decoration: underline;
+
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+img{
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.skip-link{
+  position: absolute;
+  left: -9999rem;
+  top: 2.5rem;
+  z-index: 9999999;
+
+  &:focus{
+    left: 2.5rem;
+    text-decoration: none;
+  }
+}
 }
