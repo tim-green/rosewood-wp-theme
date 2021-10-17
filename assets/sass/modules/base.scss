@@ -6,8 +6,26 @@
 */
 
 body{
-  background: white; // Change to $color-primary
-  margin: 0;
-  font: 14px/20px sans-serif;
-  color: $color-primary;
+
+  background: $white;
+  border: none;
+  color: $base-text-color;
+  @include fontSize(18px);
+  font-family: $font-stack;
+  padding-left: 380px;
+
+  .lock-scroll{
+    height: 100%;
+    position: fixed;
+    width: 100%;
+  }
+
+  *{
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box; 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
 }
