@@ -90,6 +90,9 @@ $theme_version = '1.0.0';
 	 * @since v1.0
 	 */
 
+	// Handle Customizer settings
+	require get_template_directory() . '/inc/wp-customize.php';
+	
 
 	/**
 	 * Fire the wp_body_open action.
