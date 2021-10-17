@@ -52,6 +52,9 @@ $theme_version = '1.0.0';
 			add_theme_support( 'html5', array(
 				'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
 			) );
+			
+			// Custom image sizes
+			add_image_size( 'rosewood_preview-image', 600, 9999 );
 
 			// Add support for Block Styles.
 			add_theme_support( 'wp-block-styles' );
