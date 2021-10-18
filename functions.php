@@ -544,6 +544,27 @@ $theme_version = '1.0.0';
 		}
 	}
 	add_action( 'wp_enqueue_scripts', 'themes_starter_scripts_loader' );
+
+	/**
+	 * Filter post class
+	 *
+	 * @since v1.0
+	 */
+
+	if ( ! function_exists( 'rosewood_post_classes' ) ) {
+		function rosewood_post_classes( $classes ) {
+	
+			// Class indicating presence/lack of post thumbnail
+			$classes[] = ( has_post_thumbnail() ? 'has-thumbnail' : 'missing-thumbnail' );
+	
+			// Class indicating lack of title
+			if ( ! get_the_title() ) $classes[] = 'no-title';
+	
+			return $classes;
+		}
+	}
+	add_action( 'post_class', 'rosewood_post_classes' );
+
 	/**
 	 * Filter no-js class
 	 *
