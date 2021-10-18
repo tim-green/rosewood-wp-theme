@@ -815,6 +815,36 @@ if ( ! function_exists( 'rosewood_the_archive_type' ) ) {
 	}
 	add_filter( 'get_the_archive_title', 'rosewood_remove_archive_title_prefix' );
 endif;
+
+
+/**
+	 * Filter archive description
+	 *
+	 * @since v1.0
+	 */
+
+if ( ! function_exists( 'rosewood_filter_archive_description' ) ) :
+	function rosewood_filter_archive_description( $description ) {
+		
+		// On search, show a string describing the results of the search.
+		if ( is_search() ) {
+			global $wp_query;
+			if ( $wp_query->found_posts ) {
+				/* Translators: %s = Number of results */
+				$description = sprintf( _x( 'We found %s matching your search query.', 'Translators: %s = the number of search results', 'rosewood' ), $wp_query->found_posts . ' ' . ( 1 == $wp_query->found_posts ? __( 'result', 'rosewood' ) : __( 'results', 'rosewood' ) ) );
+			} else {
+				/* Translators: %s = the search query */
+				$description = sprintf( _x( 'We could not find any results for the search query "%s". You can try again through the form below.', 'Translators: %s = the search query', 'rosewood' ), get_search_query() );
+			}
+		}
+
+		return $description;
+
+	}
+	add_filter( 'get_the_archive_description', 'rosewood_filter_archive_description' );
+endif;
+
+
 /**
 	 * Specific block editor support
 	 *
