@@ -9,6 +9,15 @@
 
 	$page_id = get_option( 'page_for_posts' );
 ?>
+<?php 
+
+$archive_title_elem 	= is_front_page() || ( is_home() && get_option( 'show_on_front' ) == 'posts' ) ? 'h2' : 'h1';
+$archive_type 			= rosewood_get_archive_type();
+$archive_title 			= get_the_archive_title();
+$archive_description 	= get_the_archive_description();
+
+if ( $archive_title || $archive_description ) : 
+	?>
 
 	<div class="row">
 		
