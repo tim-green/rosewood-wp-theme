@@ -816,6 +816,83 @@ if ( ! function_exists( 'rosewood_the_archive_type' ) ) {
 	add_filter( 'get_the_archive_title', 'rosewood_remove_archive_title_prefix' );
 endif;
 /**
+	 * Specific block editor support
+	 *
+	 * @since v1.0
+	 */
+
+if ( ! function_exists( 'rosewood_add_block_editor_features' ) ) :
+	function rosewood_add_block_editor_features() {
+
+		/* Block Editor Features ------------- */
+
+		add_theme_support( 'align-wide' );
+
+		/* Block Editor Palette -------------- */
+
+		add_theme_support( 'editor-color-palette', array(
+			array(
+				'name' 	=> _x( 'Black', 'Name of the black color in the Gutenberg palette', 'rosewood' ),
+				'slug' 	=> 'black',
+				'color' => '#121212',
+			),
+			array(
+				'name' 	=> _x( 'Dark Gray', 'Name of the dark gray color in the Gutenberg palette', 'rosewood' ),
+				'slug' 	=> 'dark-gray',
+				'color' => '#333',
+			),
+			array(
+				'name' 	=> _x( 'Medium Gray', 'Name of the medium gray color in the Gutenberg palette', 'rosewood' ),
+				'slug' 	=> 'medium-gray',
+				'color' => '#555',
+			),
+			array(
+				'name' 	=> _x( 'Light Gray', 'Name of the light gray color in the Gutenberg palette', 'rosewood' ),
+				'slug' 	=> 'light-gray',
+				'color' => '#777',
+			),
+			array(
+				'name' 	=> _x( 'White', 'Name of the white color in the Gutenberg palette', 'rosewood' ),
+				'slug' 	=> 'white',
+				'color' => '#fff',
+			),
+		) );
+
+		/* Block Editor Font Sizes ----------- */
+
+		add_theme_support( 'editor-font-sizes', array(
+			array(
+				'name' 		=> _x( 'Small', 'Name of the small font size in Gutenberg', 'rosewood' ),
+				'shortName' => _x( 'S', 'Short name of the small font size in the Gutenberg editor.', 'rosewood' ),
+				'size' 		=> 16,
+				'slug' 		=> 'small',
+			),
+			array(
+				'name' 		=> _x( 'Normal', 'Name of the regular font size in Gutenberg', 'rosewood' ),
+				'shortName' => _x( 'N', 'Short name of the regular font size in the Gutenberg editor.', 'rosewood' ),
+				'size' 		=> 18,
+				'slug' 		=> 'normal',
+			),
+			array(
+				'name' 		=> _x( 'Large', 'Name of the large font size in Gutenberg', 'rosewood' ),
+				'shortName' => _x( 'L', 'Short name of the large font size in the Gutenberg editor.', 'rosewood' ),
+				'size' 		=> 24,
+				'slug' 		=> 'large',
+			),
+			array(
+				'name' 		=> _x( 'Larger', 'Name of the larger font size in Gutenberg', 'rosewood' ),
+				'shortName' => _x( 'XL', 'Short name of the larger font size in the Gutenberg editor.', 'rosewood' ),
+				'size' 		=> 28,
+				'slug' 		=> 'larger',
+			),
+		) );
+
+	}
+	add_action( 'after_setup_theme', 'rosewood_add_block_editor_features' );
+endif;
+
+
+/**
 	 * block editor styles
 	 *
 	 * @since v1.0
