@@ -701,6 +701,54 @@ $theme_version = '1.0.0';
 	add_action( 'wp_ajax_nopriv_ajax_pagination', 'rosewood_ajax_results' );
 	add_action( 'wp_ajax_ajax_pagination', 'rosewood_ajax_results' );
 	
+	/**
+	 * Get and output archive type
+	 *
+	 * @since v1.0
+	 */
+
+	
+if ( ! function_exists( 'rosewood_get_archive_type' ) ) {
+	function rosewood_get_archive_type() {
+		if ( is_category() ) {
+			$type = __( 'Category', 'rosewood' );
+		} elseif ( is_tag() ) {
+			$type = __( 'Tag', 'rosewood' );
+		} elseif ( is_author() ) {
+			$type = __( 'Author', 'rosewood' );
+		} elseif ( is_year() ) {
+			$type = __( 'Year', 'rosewood' );
+		} elseif ( is_month() ) {
+			$type = __( 'Month', 'rosewood' );
+		} elseif ( is_day() ) {
+			$type = __( 'Date', 'rosewood' );
+		} elseif ( is_post_type_archive() ) {
+			$type = __( 'Post Type', 'rosewood' );
+		} elseif ( is_tax() ) {
+			$term = get_queried_object();
+			$taxonomy = $term->taxonomy;
+			$taxonomy_labels = get_taxonomy_labels( get_taxonomy( $taxonomy ) );
+			$type = $taxonomy_labels->name;
+		} else if ( is_search() ) {
+			$type = __( 'Search Results', 'rosewood' );
+		} else if ( is_home() && get_theme_mod( 'rosewood_home_title' ) ) {
+			$type = __( 'Introduction', 'rosewood' );
+		} else {
+			$type = __( 'Archives', 'rosewood' );
+		}
+
+		return $type;
+	}
+}
+
+
+if ( ! function_exists( 'rosewood_the_archive_type' ) ) {
+	function rosewood_the_archive_type() {
+		$type = rosewood_get_archive_type();
+
+		echo $type;
+	}
+}
 
 	/**
 	 * Filter archive title
