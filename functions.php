@@ -701,6 +701,72 @@ $theme_version = '1.0.0';
 	add_action( 'wp_ajax_nopriv_ajax_pagination', 'rosewood_ajax_results' );
 	add_action( 'wp_ajax_ajax_pagination', 'rosewood_ajax_results' );
 	
+
+	/**
+	 * Filter archive title
+	 *
+	 * @since v1.0
+	 */
+
+	if ( ! function_exists( 'rosewood_remove_archive_title_prefix' ) ) :
+	function rosewood_remove_archive_title_prefix( $title ) {
+
+		// A duplicate of the core archive title conditional, but without the prefix.
+		if ( is_category() ) {
+			$title = single_cat_title( '', false );
+		} elseif ( is_tag() ) {
+			$title = single_tag_title( '#', false );
+		} elseif ( is_author() ) {
+			$title = '<span class="vcard">' . get_the_author() . '</span>';
+		} elseif ( is_year() ) {
+			$title = get_the_date( 'Y' );
+		} elseif ( is_month() ) {
+			$title = get_the_date( 'F Y' );
+		} elseif ( is_day() ) {
+			$title = get_the_date( get_option( 'date_format' ) );
+		} elseif ( is_tax( 'post_format' ) ) {
+			if ( is_tax( 'post_format', 'post-format-aside' ) ) {
+				$title = _x( 'Aside', 'post format archive title', 'rosewood' );
+			} elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) {
+				$title = _x( 'Galleries', 'post format archive title', 'rosewood' );
+			} elseif ( is_tax( 'post_format', 'post-format-image' ) ) {
+				$title = _x( 'Images', 'post format archive title', 'rosewood' );
+			} elseif ( is_tax( 'post_format', 'post-format-video' ) ) {
+				$title = _x( 'Videos', 'post format archive title', 'rosewood' );
+			} elseif ( is_tax( 'post_format', 'post-format-quote' ) ) {
+				$title = _x( 'Quotes', 'post format archive title', 'rosewood' );
+			} elseif ( is_tax( 'post_format', 'post-format-link' ) ) {
+				$title = _x( 'Links', 'post format archive title', 'rosewood' );
+			} elseif ( is_tax( 'post_format', 'post-format-status' ) ) {
+				$title = _x( 'Statuses', 'post format archive title', 'rosewood' );
+			} elseif ( is_tax( 'post_format', 'post-format-audio' ) ) {
+				$title = _x( 'Audio', 'post format archive title', 'rosewood' );
+			} elseif ( is_tax( 'post_format', 'post-format-chat' ) ) {
+				$title = _x( 'Chats', 'post format archive title', 'rosewood' );
+			}
+		} elseif ( is_post_type_archive() ) {
+			$title = post_type_archive_title( '', false );
+		} elseif ( is_tax() ) {
+			$title = single_term_title( '', false );
+		} elseif ( is_home() ) {
+			if ( get_theme_mod( 'rosewood_home_title' ) ) {
+				$title = get_theme_mod( 'rosewood_home_title' );
+			} elseif ( get_option( 'page_for_posts' ) ) {
+				$title = get_the_title( get_option( 'page_for_posts' ) );
+			} else {
+				$title = '';
+			}
+		} elseif ( is_search() ) {
+			$title = '&ldquo;' . get_search_query() . '&rdquo;';
+		} else {
+			$title = __( 'Archives', 'rosewood' );
+		}
+
+		return $title;
+
+	}
+	add_filter( 'get_the_archive_title', 'rosewood_remove_archive_title_prefix' );
+endif;
 /**
 	 * block editor styles
 	 *
