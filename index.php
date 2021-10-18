@@ -38,3 +38,16 @@ if ( $archive_title || $archive_description ) :
 	</div><!-- /.row -->
 
 <?php get_footer(); ?>
+		<?php if ( $archive_type ) : ?>
+			<h4 class="page-subtitle"><?php echo wp_kses_post( $archive_type ); ?></h4>
+		<?php endif; ?>
+
+		<?php if ( $archive_title ) : ?>
+			<<?php echo $archive_title_elem; ?> class="page-title"><?php echo wp_kses_post( $archive_title ); ?></<?php echo $archive_title_elem; ?>>
+		<?php endif; ?>
+
+		<?php if ( $archive_description ) : ?>
+			<div class="page-description">
+				<?php echo wpautop( wp_kses_post( $archive_description ) ); ?>
+			</div>
+		<?php endif; ?>
