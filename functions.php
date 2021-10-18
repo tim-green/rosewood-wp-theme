@@ -566,6 +566,54 @@ $theme_version = '1.0.0';
 	add_action( 'post_class', 'rosewood_post_classes' );
 
 	/**
+	 * Filter body class
+	 *
+	 * @since v1.0
+	 */
+	if ( ! function_exists( 'rosewood_body_classes' ) ) {
+		function rosewood_body_classes( $classes ) {
+	
+			// Check whether we're in the customizer preview
+			if ( is_customize_preview() ) {
+				$classes[] = 'customizer-preview';
+			}
+	
+			// Hide social buttons
+			if ( get_theme_mod( 'rosewood_hide_social' ) ) {
+				$classes[] = 'hide-social';
+			}
+	
+			// White bg class
+			if ( get_theme_mod( 'rosewood_accent_color' ) == '#ffffff' && ( ! get_background_color() || get_background_color() == 'ffffff' ) ) {
+				$classes[] = 'white-bg';
+			}
+	
+			// Check whether the custom backgrounds are both set to the same thing
+			if ( get_theme_mod( 'rosewood_accent_color' ) && get_background_color() && ltrim( get_theme_mod( 'rosewood_accent_color' ), '#' ) == get_background_color() ) {
+				$classes[] = 'same-custom-bgs';
+			}
+	
+			// Dark sidebar text
+			if ( get_theme_mod( 'rosewood_dark_sidebar_text' ) ) {
+				$classes[] = 'dark';
+			}
+	
+			// Add short class for resume page template
+			if ( is_page_template( 'resume-page-template.php' ) ) {
+				$classes[] = 'resume-template';
+			}
+	
+			// Add short class for full width page template
+			if ( is_page_template( 'full-width-page-template.php' ) ) {
+				$classes[] = 'full-width-template';
+			}
+	
+			return $classes;
+		}
+	} // End if().
+	add_action( 'body_class', 'rosewood_body_classes' );
+
+	/**
 	 * Filter no-js class
 	 *
 	 * @since v1.0
