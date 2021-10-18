@@ -93,6 +93,9 @@ $theme_version = '1.0.0';
 	// Handle Customizer settings
 	require get_template_directory() . '/inc/wp-customize.php';
 	
+	// Google Hooks GA - FUTURE function
+	//require get_template_directory() . '/inc/google.php';
+
 
 	/**
 	 * Fire the wp_body_open action.
