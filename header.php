@@ -26,39 +26,28 @@
 
 		<a class="skip-link button" href="#site-content"><?php _e( 'Skip to the content', 'rosewood' ); ?></a>
 
-<div id="wrapper">
+		<header class="site-header group">
 
-	<header>
-		<nav id="header" class="navbar navbar-expand-md <?php echo $navbar_scheme; if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
-			<div class="container">
-				<a class="navbar-brand" href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-					<?php
-						$header_logo = get_theme_mod( 'header_logo' ); // get custom meta-value
+			<?php $site_title_elem = is_front_page() || ( is_home() && get_option( 'show_on_front' ) == 'posts' ) ? 'h1' : 'p'; ?>
 
-						if ( ! empty( $header_logo ) ) :
-					?>
-						<img src="<?php echo esc_url( $header_logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
-					<?php
-						else :
-							echo esc_attr( get_bloginfo( 'name', 'display' ) );
-						endif;
-					?>
-				</a>
+			<<?php echo $site_title_elem; ?> class="site-title"><a href="<?php echo esc_url( home_url() ); ?>" class="site-name"><?php bloginfo( 'name' ); ?></a></<?php echo $site_title_elem; ?>>
 
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="<?php _e( 'Toggle navigation', 'my-theme' ); ?>">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				
-				<div id="navbar" class="collapse navbar-collapse">
+			<?php if ( get_bloginfo( 'description' ) ) : ?>
+
+				<div class="site-description"><?php echo wpautop( get_bloginfo( 'description' ) ); ?></div>
+
+			<?php endif; ?>
+			<!-- nav toggle -->
+			<div class="nav-toggle">
+				<div class="bar"></div>
+				<div class="bar"></div>
+			</div>
+			<!-- menu wrapper -->
+			<div class="menu-wrapper">
+
+				<ul class="main-menu desktop">
+
 					<?php
-						/** Loading WordPress Custom Menu (theme_location) **/
-						wp_nav_menu( array(
-							'theme_location'  => 'main-menu',
-							'container'       => '',
-							'menu_class'      => 'navbar-nav',
-							'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-							'walker'          => new WP_Bootstrap_Navwalker(),
-						) );
 
 					if ( has_nav_menu( 'main-menu' ) ) {
 
@@ -80,26 +69,97 @@
 						wp_list_pages( $fallback_args );
 					}
 					?>
-					
-					<?php if ( '1' === $search_enabled ) : ?>
-						<form class="form-inline search-form my-2 my-lg-0" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-							<input type="text" id="s" name="s" class="form-control mr-sm-2" placeholder="<?php _e( 'Search', 'my-theme' ); ?>...">
-							<button type="submit" id="searchsubmit" name="submit" class="btn btn-outline-secondary my-2 my-sm-0"><?php _e( 'Search', 'my-theme' ); ?></button>
-						</form>
-					<?php endif; ?>
-				</div><!-- /.navbar-collapse -->
-			</div><!-- /.container -->
-		</nav><!-- /#header -->
-	</header>
-	
-	<main id="main" class="container"<?php if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' style="padding-top: 100px;"'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' style="padding-bottom: 100px;"'; endif; ?>>
-		
-		<?php
-			// If Single or Archive (Category, Tag, Author or a Date based page)
-			if ( is_single() || is_archive() ) :
-		?>
-			<div class="row">
-				<div class="col-md-8 col-sm-12">
-		<?php
-			endif;
-		?>
+				</ul>
+
+			</div><!-- .menu-wrapper -->
+
+			<?php if ( has_nav_menu( 'social-menu' ) || ( ! get_theme_mod( 'rosewood_hide_social' ) || is_customize_preview() ) ) : ?>
+
+				<div class="social-menu desktop">
+
+					<ul class="social-menu-inner">
+
+						<li class="social-search-wrapper"><a href="<?php echo esc_url( home_url( '?s=' ) ); ?>"></a></li>
+
+						<?php
+
+						$social_args = array(
+							'theme_location'	=> 'social-menu',
+							'container'			=> '',
+							'container_class'	=> 'menu-social group',
+							'items_wrap'		=> '%3$s',
+							'menu_id'			=> 'menu-social-items',
+							'menu_class'		=> 'menu-items',
+							'depth'				=> 1,
+							'link_before'		=> '<span class="screen-reader-text">',
+							'link_after'		=> '</span>',
+							'fallback_cb'		=> '',
+						);
+
+						wp_nav_menu( $social_args );
+
+						?>
+
+					</ul><!-- .social-menu-inner -->
+
+				</div><!-- .social-menu -->
+
+			<?php endif; ?>
+
+		</header><!-- header -->
+
+		<div class="mobile-menu-wrapper">
+
+			<ul class="main-menu mobile">
+				<?php
+				if ( has_nav_menu( 'main-menu' ) ) {
+					wp_nav_menu( $main_menu_args );
+				} else {
+					wp_list_pages( $fallback_args );
+				}
+				if ( ! get_theme_mod( 'rosewood_hide_social', false ) ) : ?>
+					<li class="toggle-mobile-search-wrapper"><a href="#" class="toggle-mobile-search"><?php _e( 'Search', 'rosewood' ); ?></a></li>
+				<?php endif; ?>
+			</ul><!-- .main-menu.mobile -->
+
+			<?php if ( has_nav_menu( 'social-menu' ) && ( ! get_theme_mod( 'rosewood_hide_social', false ) || is_customize_preview() ) ) : ?>
+
+				<div class="social-menu mobile">
+
+					<ul class="social-menu-inner">
+
+						<?php wp_nav_menu( $social_args ); ?>
+
+					</ul><!-- .social-menu-inner -->
+
+				</div><!-- .social-menu -->
+
+			<?php endif; ?>
+
+		</div><!-- .mobile-menu-wrapper -->
+
+		<?php if ( ! get_theme_mod( 'rosewood_hide_social', false ) ) : ?>
+
+			<div class="mobile-search">
+
+				<div class="untoggle-mobile-search"></div>
+
+				<?php get_search_form(); ?>
+
+				<div class="mobile-results">
+
+					<div class="results-wrapper"></div>
+
+				</div>
+
+			</div><!-- .mobile-search -->
+
+			<div class="search-overlay">
+
+				<?php get_search_form(); ?>
+
+			</div><!-- .search-overlay -->
+
+		<?php endif; ?>
+
+		<main class="site-content" id="site-content">
