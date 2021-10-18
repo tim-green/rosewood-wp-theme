@@ -632,6 +632,75 @@ $theme_version = '1.0.0';
 		}
 	}
 	add_action( 'wp_head', 'rosewood_has_js' );
+
+	/**
+	 * Ajax search results
+	 *
+	 * @since v1.0
+	 */
+
+	if ( ! function_exists( 'rosewood_ajax_results' ) ) {
+		function rosewood_ajax_results() {
+	
+			$string = json_decode( stripslashes( $_POST['query_data'] ), true );
+	
+			if ( $string ) :
+	
+				$args = array(
+					's'					=> $string,
+					'posts_per_page'	=> 5,
+					'post_status'		=> 'publish',
+				);
+	
+				$ajax_query = new WP_Query( $args );
+	
+				if ( $ajax_query->have_posts() ) {
+	
+					?>
+	
+					<p class="results-title"><?php _e( 'Search Results', 'rosewood' ); ?></p>
+	
+					<ul>
+	
+						<?php
+	
+						// Custom loop
+						while ( $ajax_query->have_posts() ) :
+	
+							$ajax_query->the_post();
+	
+							// Load the appropriate content template
+							get_template_part( 'content-mobile-search' );
+	
+						// End the loop
+						endwhile;
+	
+						?>
+	
+					</ul>
+	
+					<?php if ( $ajax_query->max_num_pages > 1 ) : ?>
+	
+						<a class="show-all" href="<?php echo esc_url( home_url( '?s=' . $string ) ); ?>"><?php _e( 'Show all', 'rosewood' ); ?></a>
+	
+					<?php endif; ?>
+	
+					<?php
+	
+				} else {
+	
+					echo '<p class="no-results-message">' . __( 'We could not find anything that matches your search query. Please try again.', 'rosewood' ) . '</p>';
+	
+				} // End if().
+	
+			endif; // End if().
+	
+			die();
+		}
+	} // End if().
+	add_action( 'wp_ajax_nopriv_ajax_pagination', 'rosewood_ajax_results' );
+	add_action( 'wp_ajax_ajax_pagination', 'rosewood_ajax_results' );
+	
 /**
 	 * block editor styles
 	 *
