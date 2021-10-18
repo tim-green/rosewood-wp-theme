@@ -59,6 +59,26 @@
 							'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
 							'walker'          => new WP_Bootstrap_Navwalker(),
 						) );
+
+					if ( has_nav_menu( 'main-menu' ) ) {
+
+						$main_menu_args = array(
+							'container' 		=> '',
+							'items_wrap' 		=> '%3$s',
+							'theme_location' 	=> 'main-menu',
+						);
+
+						wp_nav_menu( $main_menu_args );
+
+					} else {
+
+						$fallback_args = array(
+							'container' => '',
+							'title_li' 	=> '',
+						);
+
+						wp_list_pages( $fallback_args );
+					}
 					?>
 					
 					<?php if ( '1' === $search_enabled ) : ?>
