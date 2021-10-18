@@ -627,3 +627,36 @@ $theme_version = '1.0.0';
 		}
 	}
 	add_action( 'wp_head', 'rosewood_has_js' );
+/**
+	 * block editor styles
+	 *
+	 * @since v1.0
+	 */
+
+if ( ! function_exists( 'rosewood_block_editor_styles' ) ) :
+	function rosewood_block_editor_styles() {
+
+		$dependencies = array();
+		$theme_version = wp_get_theme( 'rosewood' )->get( 'Version' );
+
+		/**
+		 * Translators: If there are characters in your language that are not
+		 * supported by the theme fonts, translate this to 'off'. Do not translate
+		 * into your own language.
+		 */
+		$google_fonts = _x( 'on', 'Google Fonts: on or off', 'rosewood' );
+
+		if ( 'off' !== $google_fonts ) {
+
+			// Register Google Fonts
+			wp_register_style( 'rosewood-block-editor-styles-font', '//fonts.googleapis.com/css?family=Archivo:400,400i,600,600i,700,700i&amp;subset=latin-ext', false, 1.0, 'all' );
+			$dependencies[] = 'rosewood-block-editor-styles-font';
+
+		}
+
+		// Enqueue the editor styles
+		wp_enqueue_style( 'rosewood-block-editor-styles', get_theme_file_uri( '/assets/css/rosewood-block-editor-styles.css' ), $dependencies, $theme_version, 'all' );
+
+	}
+	add_action( 'enqueue_block_editor_assets', 'rosewood_block_editor_styles', 1 );
+endif;
