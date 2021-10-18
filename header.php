@@ -24,7 +24,7 @@
 		}
 		?>
 
-<a href="#main" class="sr-only sr-only-focusable"><?php _e( 'Skip to main content', 'my-theme' ); ?></a>
+		<a class="skip-link button" href="#site-content"><?php _e( 'Skip to the content', 'rosewood' ); ?></a>
 
 <div id="wrapper">
 
