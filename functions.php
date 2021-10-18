@@ -846,6 +846,23 @@ endif;
 
 
 /**
+	 * Pre get posts
+	 *
+	 * @since v1.0
+	 */
+
+if ( ! function_exists( 'rosewood_sort_search_posts_by_date' ) ) {
+	function rosewood_sort_search_posts_by_date( $query ) {
+
+		// In search, order results by date
+		if ( ! is_admin() && $query->is_main_query() && $query->is_search() ) {
+			$query->set( 'orderby', 'date' );
+		}
+
+	}
+}
+add_action( 'pre_get_posts', 'rosewood_sort_search_posts_by_date' );
+/**
 	 * Specific block editor support
 	 *
 	 * @since v1.0
