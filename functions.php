@@ -946,6 +946,31 @@ endif; // End if().
 
 
 /**
+	 * Admin notices
+	 *
+	 * @since v1.0
+	 */
+
+if ( ! function_exists( 'rosewood_admin_notices' ) ) :
+	function rosewood_admin_notices() {
+
+		// Show notice about posts per page on theme activation, if the setting isn't set already
+		if ( isset( $_GET['activated'] ) && true == $_GET['activated'] && 'rosewood' == get_option( 'template' ) && get_option( 'posts_per_page' ) < 999 ) : ?>
+
+			<div class="notice notice-info is-dismissible">
+				<?php /* Translators: %1$1s = opening link to the demo site, %2$2s = closing link tag, %3$3s = link to the reading options, %4$4s = closing link tag */ ?>
+				<p><?php printf( _x( '', '<a href="' . admin_url( 'options-reading.php' ) . '">', '</a>' ); ?></p>
+			</div>
+
+			<?php
+		endif;
+
+	}
+	add_action( 'rosewood_admin_notices', 'showAdminMessages' );
+endif;
+
+
+/**
 	 * Specific block editor support
 	 *
 	 * @since v1.0
