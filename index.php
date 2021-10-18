@@ -38,6 +38,8 @@ if ( $archive_title || $archive_description ) :
 	</div><!-- /.row -->
 
 <?php get_footer(); ?>
+	<header class="page-header">
+
 		<?php if ( $archive_type ) : ?>
 			<h4 class="page-subtitle"><?php echo wp_kses_post( $archive_type ); ?></h4>
 		<?php endif; ?>
@@ -51,4 +53,7 @@ if ( $archive_title || $archive_description ) :
 				<?php echo wpautop( wp_kses_post( $archive_description ) ); ?>
 			</div>
 		<?php endif; ?>
+
 		<?php if ( is_search() && ! have_posts() ) get_search_form(); ?>
+
+	</header><!-- .page-header -->
