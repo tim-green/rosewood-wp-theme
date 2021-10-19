@@ -57,5 +57,12 @@
   }
 }
 
+.site-description{
+  color: $lightpink;
+  margin-top: 8px;
+  @include fontSize(14px);
+  font-weight: 600;
+}
+
   }
 }
