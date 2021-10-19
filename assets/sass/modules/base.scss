@@ -172,4 +172,27 @@ address{
   margin-bottom: 20px;
   padding: 20px 22px;
 }
+
+//Global Alignment
+
+.alignleft, .alignright{
+  margin-bottom: 20px;
+  max-width: 40%;
+}
+
+.alignleft{
+  float: left;
+  margin: 5px 40px 30px -80px;
+}
+
+.alignright{
+  float: right;
+  margin: 5px -80px 30px 40px;
+}
+
+.alignnone{
+  margin-left: -80px;
+  margin-right: -80px;
+  max-width: calc(100% - 160px);
+
 }
