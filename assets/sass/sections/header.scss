@@ -38,6 +38,26 @@
   }
 }
 
+.dark{
+  .site-header{
+    color: rgba($black, .9 );
+    a{
+      color: rgba($black, .9 );
+    }
+
+    &:hover{
+      border-bottom-color: rgba($black, .9 );
+    }
+  }
+
+  .site-description{
+    color: rgba($black, .4);
+  }
+
+  .nav-toggle .bar{
+    background:rgba($black, .9 );
+  }
+}
 
 .site-title, .site-description{
   line-height:  1.25;
@@ -100,6 +120,35 @@
   }  
 }
 
+.dark{
+  .nav-toggle .bar{
+    background:rgba($black, .9);
+  }
+  .nav-toggle .bar:nth-child(1){
+    margin-top: -5px;
+  }
+
+  .nav-toggle .bar:nth-child(2){
+    margin-top: 3px;
+  }
+
+  .nav-toggle.active{
+    .bar{
+      transition: margin 0.2s ease-in, transform 0.2s ease-out 0.25s;
+
+      &:nth-child(1){
+        margin-top: -1px;
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2){
+        margin-top: -1px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
 //Site Navigation
 .mobile-menu-wrapper, .mobile-search{
   display: none;
@@ -121,8 +170,27 @@
       border-bottom-color: $lightpink;
     }
   }
+
+  ul{
+    list-style: none;
+    margin: 12px 0 0 25px;
+  }
+
+  li{
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+
   .current-menu-item > a{
     border-bottom-color: $white;
   }
+  
+}
+
+.dark{
+  .main-menu{
+    .current-menu-item > a, a:hover{
+      border-bottom-color: rgba($black, .9);
+    }
   }
 }
