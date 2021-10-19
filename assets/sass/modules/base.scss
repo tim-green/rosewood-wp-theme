@@ -152,4 +152,17 @@ button, .button, .wp-block-file__button, .wp-block-button__link, input[type="but
 .is-style-outline > .wp-block-button__link, .wp-block-button__link.is-style-outline {
 	padding: 14px 22px;
 }
+
+//hr
+hr{
+  border: none;
+  border-top: 1px solid rgba($black,.13);
+  margin: 50px auto;
+  width: 50%;
+
+  .is-style-wide, .is-style-dots{
+    width: 100%;
+  }
+}
+
 }
