@@ -94,6 +94,7 @@ pre{
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+
 //Inputs
 fieldset{
   border: 1px solid rgba($black,.2);
@@ -115,7 +116,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="url
   box-shadow: none !important;
   color: $black;
   font-size: 1em;
-  margin: 0 0 15px;
+  margin: 0 0 30px;
   padding: 15px;
   transition: border-color .15s linear;
   appearance: none;
@@ -150,4 +151,5 @@ button, .button, .wp-block-file__button, .wp-block-button__link, input[type="but
 
 .is-style-outline > .wp-block-button__link, .wp-block-button__link.is-style-outline {
 	padding: 14px 22px;
+}
 }
