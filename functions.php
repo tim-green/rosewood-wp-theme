@@ -536,7 +536,7 @@ $theme_version = '1.0.0';
 
 		// 2. Scripts
 		wp_enqueue_script( 'jquery',  'https://code.jquery.com/jquery-3.6.0.min.js', false, $theme_version, true );
-		
+		wp_enqueue_script('masonry');
 		//wp_enqueue_script( 'bootstrapjs', get_template_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', array( 'jquery' ), $theme_version, true );
 		wp_enqueue_script( 'mainjs', get_template_directory_uri() . '/assets/build/app.min.js', false, $theme_version, true );
 
