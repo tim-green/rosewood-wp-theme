@@ -25,6 +25,13 @@
   width: 380px;
   z-index: 99998;
 }
+
+.same-custom-bgs, .white-bg{
+  .site-header{
+    border-right: 1px solid rgba($black, .075);
+  }
+}
+
 .site-header{
   a{
     color: $lightpink;
