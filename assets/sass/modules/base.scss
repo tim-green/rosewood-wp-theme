@@ -49,6 +49,10 @@ img{
   max-width: 100%;
 }
 
+del{
+  text-decoration: line-through 2px $rose;
+}
+
 .skip-link{
   position: absolute;
   left: -9999rem;
