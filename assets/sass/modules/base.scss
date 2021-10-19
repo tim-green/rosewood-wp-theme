@@ -60,6 +60,14 @@ img{
     text-decoration: none;
   }
 }
+
+.group, .pageination, .gallery, .entry-content{
+  &:after{
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
 //Lists, ul,ol,dd etc
 
 ol, ul{
