@@ -149,11 +149,25 @@ input[type="text"], input[type="password"], input[type="email"], input[type="url
   transition: border-color .15s linear;
   appearance: none;
   width: 100%;
+
+  &:focus{
+    outline: none;
+    border: none;
+    border: 1px solid $rose;
+    transition: border-color .15s linear;
+  }
 }
 
 textarea{
   line-height: 1.4;
   height: 200px;
+
+  &:focus{
+    outline: none;
+    border: none;
+    border: 1px solid $rose;
+    transition: border-color .15s linear;
+  }
 }
 
 button, .button, .wp-block-file__button, .wp-block-button__link, input[type="button"], input[type="submit"]{
