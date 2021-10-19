@@ -13,5 +13,17 @@
 
   h1{
     margin: 0 0 30px;
+.site-header{
+  background: $rose;
+  color: $white;
+  margin: 0 auto;
+  padding: 80px 50px 144px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 380px;
+  z-index: 99998;
+}
   }
 }
