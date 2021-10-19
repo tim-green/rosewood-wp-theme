@@ -68,6 +68,14 @@ img{
     display: block;
   }
 }
+
+input{
+  &::-webkit-input-placeholder, &::-moz-placeholder, &::-ms-input-placeholder{
+    color: rgba($black, 0.4 ); 
+  }
+}
+
+
 //Lists, ul,ol,dd etc
 
 ol, ul{
