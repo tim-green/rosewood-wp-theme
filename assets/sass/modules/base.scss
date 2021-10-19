@@ -109,11 +109,18 @@ code{
 pre{
   background: $rose;
   color: $cream;
+  border: 2px solid $deeprose;
   @include fontSize(14px);
   line-height: 1.5;
   padding: 20px;
   white-space: pre-wrap;
   word-wrap: break-word;
+  transition: border-color ease-out .5s;
+
+  &:hover{
+    border-color: $soft-red;
+    transition: border-color ease-in .5s;
+  }
 }
 
 //Inputs
