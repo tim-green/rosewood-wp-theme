@@ -99,6 +99,13 @@
     z-index: 1;
   }  
 }
+
+//Site Navigation
+.mobile-menu-wrapper, .mobile-search{
+  display: none;
+  transform: translateZ(0);
+}
+
 .main-menu{
   height:100%;
   margin: 0;
