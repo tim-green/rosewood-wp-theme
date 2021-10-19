@@ -43,5 +43,19 @@
   line-height:  1.25;
 }
 
+.site-title{
+  a{
+    
+    text-decoration: none;
+    transition: border-bottom ease-in .5s;
+    font-size: 2.5rem;
+    font-weight: 0;
+    &:hover{
+      border-bottom: 2px solid $lightpink;
+      transition: ease-in .15s;
+    }
+  }
+}
+
   }
 }
