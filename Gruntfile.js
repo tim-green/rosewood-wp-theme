@@ -30,7 +30,7 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'assets/build/app.min.js': [
-            'assets/js/vendor/*.js','assets/js/plugins/*.js','assets/js/**/*.js','assets/js/plugins/plugins.js'
+            'assets/js/vendor/rosewood-var.js','assets/js/plugins/mobile-menu.js','assets/js/plugins/search-toggle.js','assets/js/plugins/resize.js', 'assets/js/plugins/smooth-scroll.js','assets/js/plugins/ajax-search.js','assets/js/plugins/plugins.js'
           ]
         },
         options: {
