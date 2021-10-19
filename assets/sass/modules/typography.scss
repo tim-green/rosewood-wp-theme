@@ -7,23 +7,43 @@
 
 body{
   line-height: $base-line-height;
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 60px 0 30px;
 }
 
 ol{
   text-align: left;
+h1{
+  @include fontSize(40px);
+}
+
+h2{
+  @include fontSize(32px);
+}
 
   li{
+h3{
+  @include fontSize(28px);
+}
 
   }
+h4{
+  @include fontSize(24px);
 }
 
 code{
   font-weight: bold;
   padding: 2px 5px;
   border-radius: 3px;
+h5{
+  @include fontSize(20px);
 }
 
 a{
   color: $black;;
   font-weight: bold;
+h6{
+  @include fontSize(18px);
 }
