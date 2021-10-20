@@ -26,3 +26,13 @@
 a{
     transition: $base-transition;
 }
+
+//entry title
+.entry-title{
+  @include fontSize(36px);
+  font-weight: 600;
+  letter-spacing: -.45px;
+  line-height: 1.25;
+  margin: 0;
+  word-break: break-word;
+}
