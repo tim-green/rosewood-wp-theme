@@ -2,7 +2,7 @@
 
 	<a href="<?php the_permalink(); ?>">
 		<?php
-		$sticky = is_sticky() ? '<div class="sticky-arrow"></div>'  : '';
+		$sticky = is_sticky() ? '<span class="sticky-arrow"></span>'  : '';
 		the_title( '<h2 class="title">' . $sticky . '<span>', '</span></h2>' );
 
 		// Check setting for the order of month and day
