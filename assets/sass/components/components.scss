@@ -36,3 +36,19 @@ a{
   margin: 0;
   word-break: break-word;
 }
+
+.excerpt{
+  @include fontSize(24px);
+  line-height: 1.45;
+
+  a{
+    border-bottom: 1px solid $black;
+    color: $black;
+
+    &:hover{
+      border-bottom-color: rgba($black, .4);
+      color: rgba($black, .4);
+      text-decoration: none;
+    }
+  }
+}
