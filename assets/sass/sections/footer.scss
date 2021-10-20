@@ -7,4 +7,14 @@
 
 .footer{
   padding: 0 30px 150px;
+.site-footer{
+  border-top: 1px solid rgba($black,.125);
+  display: flex;
+  @include fontSize(16px);
+  justify-content: space-between;
+  margin-top: 100px;
+  max-width: 800px;
+  padding: 25px 0 80px;
+  text-align: center;
+  }
 }
