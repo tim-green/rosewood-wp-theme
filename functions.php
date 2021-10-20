@@ -84,6 +84,7 @@ $theme_version = '1.0.0';
 		add_action( 'after_setup_theme', 'rosewood_setup' );
 	endif;
 
+
 	/**
 	 * Included files
 	 *
