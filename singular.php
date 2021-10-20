@@ -20,7 +20,15 @@ if ( have_posts() ) :
 
 			<header class="entry-header section-inner">
 
+				<figure class="post-feature-image">
+					<?php 
+					if ( has_post_thumbnail() ) {
+						the_post_thumbnail();
+					} 
+					?>
+				</figure>
 				<?php
+				
 				the_title( '<h1 class="entry-title">', '</h1>' );
 
 				// Only output post meta data on single
