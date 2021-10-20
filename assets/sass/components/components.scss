@@ -5,3 +5,24 @@
 
 */
 
+.site-content{
+  position: relative;
+}
+
+.section-inner{
+  margin: 0 auto;
+  max-width:  560px;
+  width: 85%;
+
+  .wide{
+    max-width: 800px;;
+  }
+
+  .section-inner{
+    width: 100%;
+  }
+}
+
+a{
+    transition: $base-transition;
+}
