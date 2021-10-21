@@ -1,0 +1,28 @@
+/*
+
+  Block Quotes
+  +
+
+*/
+
+blockquote {
+    border: 0 0 0 2px $black solid;
+    margin: 0 0 30px 0;
+    padding: 20px;
+    background: $rose;
+    color: $white;
+
+    p{
+        font-weight: 700;
+        hanging-punctuation: first;
+    }
+
+    cite{
+        display: block;
+        font-style: normal;
+        margin: 1em 0 0 0;
+        &:before{
+            content: "- "
+        }
+    }
+}
