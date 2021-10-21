@@ -227,3 +227,43 @@
     margin: 0 8px 0;
 }
 
+//4.11 Quote
+.wp-block-quote{
+    [style*="text-align:center"], [style*="text-align: center"]{
+        border: none;
+        padding: 0;
+    }
+}
+
+.wp-block-quote{
+    [style*="text-align:right"], [style*="text-align: right"]{
+        border-width: 0 2px 2px 0;
+        padding-left: 0;
+        padding-right: 20px;
+    }
+}
+
+.entry-content .wp-block-quote.is-large, .entry-content .wp-block-quote.is-style-large{
+    margin: 0 0 30px;
+    padding: 0 0 0 30px;
+}
+
+.entry-content{
+    blockquote p:last-child{
+        margin-bottom: 0;
+    }
+}
+
+.wp-block-quote.is-large, .wp-block-quote.is-style-large{
+    p{
+        font-size: 1.25em;
+        font-style: normal;
+        line-height: 1.5;
+    }
+
+    cite{
+        display:block;
+        font-size: 1em;
+        text-align: left;
+    }
+}
