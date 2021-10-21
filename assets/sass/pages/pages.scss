@@ -334,3 +334,21 @@
   }
 }
 
+.comment-author{
+  display: flex;
+  cite{
+    font-weight: 600;
+
+    a{
+      text-decoration: underline;
+
+      &:hover{text-decoration:none;}
+    }
+  }
+}
+.bypostauthor{
+  .comment-by-post-author{
+    display: inline;
+  }
+}
+
