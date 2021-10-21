@@ -24,3 +24,23 @@
   }
 }
 
+// max-width: 1200px
+@media (max-width: 1200px){
+  .entry-content{
+    .alignnone{
+      margin-left: 0;
+      margin-right: 0;
+      max-width: 100%;
+    }
+  }
+
+  //pull quotes
+  .alignleft, .entry-content .pull.left{
+    margin-left: 0;
+   }
+
+   .alignright, .entry-content .pull.right{
+    margin-right: 0;
+   }
+}
+
