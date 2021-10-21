@@ -311,3 +311,21 @@
   }
 }
 
+//Landscape mode
+@media (max-width: 1000px) and (orientation: landscape){
+  .mobile-menu-wrapper{
+    padding-bottom: 40px;
+
+    .main-menu{
+      margin-top: 20px;
+      padding-bottom: 0;
+      padding-right: 50%;
+    }
+
+    .social-menu{
+      left: auto;
+      max-width: 50%;
+      padding: 40px 7.5% 40px 0;
+    }
+  }
+}
