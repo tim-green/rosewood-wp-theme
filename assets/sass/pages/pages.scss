@@ -143,6 +143,20 @@
   }
 }
 
+.sticky{
+  
+      .sticky-arrow{ 
+        &::before{
+        content: '\f249';
+        font-family: 'Font Awesome 5 Pro';
+        display: inline-block;
+        @include fontSize(26px);
+        padding-right: 12px;
+        color: $rose;
+       }
+      }
+}
+
 // 4. Singular
 
 // Entry Header
