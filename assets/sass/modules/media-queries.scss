@@ -44,3 +44,30 @@
    }
 }
 
+// max-width: 1050px
+@media (max-width: 1050px){
+
+ body{
+   padding-left: 320px;
+ }
+
+ .site-header{
+   padding: 80px 40px;
+   width: 320px;
+ }
+
+ .entry-content{
+   .alignfull, .alignwide{
+     margin-left: calc(50% - 50vw + 160px);
+     max-width: calc(100vw -320px);
+     width: calc(100vw - 320px);
+   }
+ }
+
+ .search-overlay{
+   &.active{
+     left: 320px;
+   }
+ }
+}
+
