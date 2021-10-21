@@ -90,6 +90,76 @@
   }
 }
 
+// max-width: 400px
+@media (max-width: 400px){
+  .entry-content{
+    p{
+      margin-bottom: 20px;
+    }
+
+    ol, ul{
+      margin-left: 30px;
+    }
+
+    li{
+      margin-top: 12px
+    }
+
+    blockquote{
+      margin-bottom: 20px;
+    }
+
+    h1, h2, h3, h4, h5, h6{
+      margin: 40px 0 20px;
+    }
+  }
+
+  .resume-template, .portfolio-template{
+    .entry-content{
+      h1,h2,h3,h4,h5,h6{
+        margin: 40px 0  20px;
+        padding: 21px 0 0;
+      }
+    }
+  }
+
+  .comment-meta{
+    .comment-author{
+      display: block;
+      margin-bottom: 2px;
+      width: 100%;
+    }
+
+    span + span{
+      margin-left: 0;
+    }
+
+    .comment-date{
+      ~ span{
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .comments-pagination{
+    .page-numbers{
+      display: none;
+
+      &.prev, & .next{
+        display: block;
+        position: static
+      }
+
+      &.prev{
+        float: left;
+      }
+
+      &.next{
+        float: right;
+      }
+    }
+  }
+}
 // min-width: 1920px
 @media (min-width: 1920px){
     .gallery{
