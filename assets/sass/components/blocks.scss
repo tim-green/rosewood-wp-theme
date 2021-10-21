@@ -2,6 +2,7 @@
   Blocks
   + 1. Base Margins
   + 2. Accent Colours
+  + 3. Font Sizes
 */
 
 // 1. Base Margins
@@ -43,3 +44,13 @@
     .has-white-color a:hover{color: $white;}
     .has-white-background-color{background-color: $white;}
 }
+
+//3. Font Sizes
+:root{
+    .has-small-font-size{font-size: .842em;}
+    .has-regular-font-size, .has-normal-font-size{font-size: 1em;}
+    .has-large-font-size, .has-larger-font-size{line-height: 1.5;}
+    .has-large-font-size{font-size: 1.33em;}
+    .has-larger-font-size{font-size: 1.55em;}
+}
+
