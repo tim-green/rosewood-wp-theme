@@ -4,6 +4,7 @@
   +
 
   + 1. Archive
+    1.1 Archive Pagination
 */
 
 // 1. Archive
@@ -34,4 +35,33 @@
   hanging-punctuation: first-letter;
   line-height: 1.45;
   margin: 0;
+}
+
+//1.1 Archive Pagination
+.archive-pagination{
+  margin-top: 100px;
+
+  a{
+    color:rgba($black, .35);
+    text-decoration: none;
+
+    &:hover{
+      color: $black;
+    }
+  }
+
+  .previous-posts-link{
+    float: left;
+  }
+  
+  .next-posts-link{
+    float: right;
+  }
+
+  h4{
+    font-size: inherit;
+    font-weight: inherit;
+    max-width: 0;
+  }
+
 }
