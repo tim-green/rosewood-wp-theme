@@ -5,6 +5,7 @@
 
   + 1. Archive
     1.1 Archive Pagination
+  + 2. Post Wrappers
 */
 
 // 1. Archive
@@ -64,4 +65,37 @@
     max-width: 0;
   }
 
+}
+
+//2. Post Wrappers
+.posts{
+  &:first-child{
+    margin-top: 80px
+  }
+
+  ul{
+    list-style: none;
+  }
+
+  li{
+    margin: 0;
+  }
+
+  > ul + ul{
+    margin-top: 70px;
+  }
+
+  .list-title{
+    margin: 0 0 17px;
+
+    a{
+      color: rgba($black, .4);
+      text-decoration: none;
+
+      &:hover{
+        color: $black;
+        text-decoration: none;
+      }
+    }
+  }
 }
