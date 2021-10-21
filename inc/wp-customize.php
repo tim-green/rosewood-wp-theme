@@ -21,7 +21,7 @@ if ( ! class_exists( 'Rosewood_Customize' ) ) :
 
 			// Custom accent color
 			$wp_customize->add_setting( 'rosewood_accent_color', array(
-				'default' 			=> '#121212',
+				'default' 			=> '#610c24',
 				'transport' 		=> 'postMessage',
 				'type' 				=> 'theme_mod',
 				'sanitize_callback' => 'sanitize_hex_color',
