@@ -69,3 +69,6 @@
 .wp-block-buttons .wp-block-button{
     margin-top: 0;
 }
+:root .wp-block-buttons:not(.is-style-outline) .wp-block-button:not(.is-style-outline){
+    border: none;
+}
