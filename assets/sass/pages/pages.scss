@@ -8,6 +8,7 @@
   + 2. Post Wrappers
   + 3. Post Previews
   + 4. Singular Post
+  + 5. Page Image
 */
 
 // 1. Archive
@@ -186,4 +187,8 @@
       }
     }
   }
+}
+//5. Page Images
+.feature-image img{
+  width: 100%;
 }
