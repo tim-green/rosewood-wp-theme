@@ -15,6 +15,7 @@
     8.1 Comments Pagination
     8.2 Comments Respond
   + 9. Related Posts
+  + 10. Entry Content
 */
 
 // 1. Archive
@@ -569,3 +570,54 @@
   }
 }
 
+// 10. Entry Content
+.entry-content{
+  position: relative;
+  word-break: break-word;
+
+  br{
+    margin-bottom: 15px;
+  }
+
+  a{
+    border-bottom: 1px solid $black;
+    text-decoration: none;
+
+    &:hover{
+      border-bottom-color: rgba($black, .25);
+    }
+  }
+  > *:first-child{ margin-top:0;}
+  > *:last-child{ margin-bottom: 0;}
+
+  p{
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+
+  p.has-background{
+    padding: 20px;
+  }
+
+  h1 + h1, h1 + h2, h1 + h3, h1 + h4, h1 + h5, h1 + h6, 
+h2 + h1, h2 + h2, h2 + h3, h2 + h4, h2 + h5, h2 + h6, 
+h3 + h1, h3 + h2, h3 + h3, h3 + h4, h3 + h5, h3 + h6, 
+h4 + h1, h4 + h2, h4 + h3, h4 + h4, h4 + h5, h4 + h6, 
+h5 + h1, h5 + h2, h5 + h3, h5 + h4, h5 + h5, h5 + h6, 
+h6 + h1, h6 + h2, h6 + h3, h6 + h4, h6 + h5, h6 + h6 {
+  margin-top: 30px;
+}
+
+  > ol, > ul{
+    margin-bottom: 30px;
+  }
+}
+
+p.has-drop-cap:not(:focus)::first-letter{
+  font-size: 7.5em;
+  margin: .1em .05em 0 -.075em;
+}
+
+.post-feature-image{
+  padding-bottom: 5.75%;
+}
