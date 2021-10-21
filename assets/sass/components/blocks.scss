@@ -173,3 +173,52 @@
     }
 }
 
+//4.9 Pullquotes
+.wp-block-pullquote{
+    blockquote{
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+
+        &:before{
+            content: none;
+        }
+    }
+}
+
+.wp-block-pullquote.alignleft, .wp-blockpullquote.alignright{
+    max-width: 60%;
+}
+
+.wp-block-pullquote, .wp-block-pullquote.alignleft,.wp-block-pullquote.alignright{
+    blockquote{
+        p{
+            font-size: 1.25em;
+            font-weight: 700;
+            letter-spacing: -.025em;
+            margin-bottom: 1em;
+        }
+    }
+}  
+
+.wp-block-pullquote.alignleft,.wp-block-pullquote.alignright{
+    blockquote{
+        p{
+            line-height: 1.3;
+        }
+    }
+}
+
+// Style - Solid Colour
+.wp-block-pullquote.is-style-solid-color{
+    blockquote{
+        max-width: none;
+        padding: 20px;
+    }
+
+    blockquote p{
+        font-size: 1.25em;
+    }
+}
+
