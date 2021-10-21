@@ -286,3 +286,14 @@
   padding: 30px 0 0 34.12%;
   position: relative;
 }
+
+.comment-reply-title, .related-posts-title{
+  font-size: inherit;
+  margin: 0;
+  position: absolute;
+  left:0;
+  top: 30px;
+  width: calc(34.12% - 20px);
+  text-decoration: underline 2px $rose;
+}
+
