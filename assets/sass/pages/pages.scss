@@ -7,6 +7,7 @@
     1.1 Archive Pagination
   + 2. Post Wrappers
   + 3. Post Previews
+  + 4. Singular Post
 */
 
 // 1. Archive
@@ -140,3 +141,49 @@
   }
 }
 
+// 4. Singular
+
+// Entry Header
+.entry-header{
+  margin:  80px auto 60px;
+
+  .excerpt{
+    margin-top: 15px
+  }
+}
+
+// Meta
+.meta{
+  color: rgba($black, .4);
+  margin-top: 25px;
+
+  > * + * {
+    margin-left: 23px;
+  }
+
+  a{
+    border-bottom: 1px solid transparent;
+    color: inherit;
+    text-decoration: none;
+
+    &:hover{
+      border-bottom-color: rgba($black, .4);
+    }
+  }
+}
+
+.meta.bottom{
+  margin-top: 40px;
+
+  p{
+    line-height: 1.5;
+  }
+  p.tags{
+    a{
+      margin-right: 15px;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+}
