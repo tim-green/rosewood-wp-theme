@@ -17,6 +17,7 @@
   + 9. Related Posts
   + 10. Entry Content
     10.1 Pull Quotes
+    10.2 Alignment Classes
 */
 
 // 1. Archive
@@ -647,3 +648,29 @@ p.has-drop-cap:not(:focus)::first-letter{
   }
 }
 
+//10.2 Alignment Classes
+.entry-content{
+  .alignnone, .aligncenter{
+    margin: 30px auto;
+  }
+
+  .alignwide, .alignfull{
+    margin: 50px auto;
+  }
+
+  .alignfull{
+    margin-left: calc(50% - 50vw + 190px);
+    max-width:  calc(100vw - 380px);
+    width: calc(100vw - 380px);
+  }
+
+  .wp-block-image.alignfull figcaption{
+    padding: 0 5%;
+  }
+
+  .alignwide{
+    margin-left: calc(50% - 430px);
+    max-width:860px;
+    width: 860px;
+  }
+}
