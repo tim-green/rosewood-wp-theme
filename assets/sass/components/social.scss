@@ -35,6 +35,39 @@ body.hide-social{
         margin: 10px 0 0 10px;
         position: relative;
     }
+
+    a{
+        background: rgba($black, .1);
+        border-radius: 50%;
+        color: $white;
+        display: block;
+        height: 44px;
+        position: relative;
+        transition: background-color .2s linear, color .2s linear;
+        width: 44px;
+
+        &::before{
+            content: '\f0c1';
+            display:inline-block;
+            font-family: 'Font Awesome 5 Brands';
+            @include fontSize(19px);
+            position:absolute;
+            left:0;
+            right: 0;
+            top: calc(50% - 9px);
+            transition: transform .3s ease-out;
+            text-align: center;
+            z-index: 2;
+        }
+
+        &:hover, &.active{
+            background: $white;
+            color: $rose;
+            text-decoration: none;
+        }
+
+    }
+}
 }
 .no-js .social-menu .social-search-wrapper{ 
     display: none; 
