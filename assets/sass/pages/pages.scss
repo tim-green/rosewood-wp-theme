@@ -12,6 +12,7 @@
   + 6. Linked pages
   + 7. Single Pagination
   + 8. Comments
+    8.1 Comments Pagination
 */
 
 // 1. Archive
@@ -379,5 +380,46 @@
      text-decoration: underline;
    }
  }
+}
+
+//8.1 Comments Pagination
+.comments-pagination{
+  margin-top: 100px;
+  position: relative;
+  text-align: center;
+
+  a{
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  .page-numbers{
+    display: inline-block;
+    padding: 0 3px;
+  }
+
+  .page-numbers.dots{
+    color: rgba($black, .4);
+  }
+
+  .current{
+    font-weight: 700;
+  }
+
+  .prev, .next{
+    margin:0;
+    position: absolute;
+    top: 0;
+  }
+
+  .prev{
+    left: 0;
+  }
+
+  .next{
+    right: 0;
+  }
 }
 
