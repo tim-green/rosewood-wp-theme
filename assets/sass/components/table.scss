@@ -1,0 +1,45 @@
+/*
+
+  Tables
+  +
+
+*/
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    font-size: .9em;
+    margin-bottom: 30px;
+    max-width: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+th{
+    font-weight: 600;
+}
+
+th,td{
+    line-height: 1.4;
+    margin:0;
+    overflow: visible;
+    padding: 2.5%;
+}
+
+caption{
+    @include fontSize(13px);
+    font-weight: 700;
+    padding-bottom: 2.5%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+thead{
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+tbody > tr:nth-child(odd){
+    background: rgba($black, .05);
+}
