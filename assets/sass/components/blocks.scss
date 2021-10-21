@@ -1,6 +1,7 @@
 /*
   Blocks
   + 1. Base Margins
+  + 2. Accent Colours
 */
 
 // 1. Base Margins
@@ -14,4 +15,31 @@
 
 .wp-block-archives, .wp-block-button, .wp-block-buttons, .wp-block-categories, .wp-block-code, .wp-block-columns, .wp-block-cover, .wp-block-embed, .wp-block-gallery, .wp-block-group, .wp-block-image, .wp-block-latest-comments, .wp-block-latest-posts, .wp-block-media-text, .wp-block-preformatted, .wp-block-pullquote, .wp-block-social-links, .wp-block-quote, .wp-block-quote.is-large, .wp-block-quote.is-style-large, .wp-block-verse, .wp-block-video{
     margin: 30 0;
+}
+
+// 2. Accent Colours
+:root{
+    .has-background, .has-black-background-color{background-color: $black;}
+    .has-black-color, .has-black-color a:hover{color: $black;}
+    .has-black-color a{border-bottom-color: $black;}
+
+    .has-dark-gray-color{color:$gray;}
+    .has-dark-gray-color a{border-bottom-color: $gray;}
+    .has-dark-gray-color a:hover{color: $gray;}
+    .has-dark-gray-background-color{background-color: $gray;}
+
+    .has-medium-gray-color{color:$medium-gray;}
+    .has-medium-gray-color a{border-bottom-color: $medium-gray;}
+    .has-medium-gray-color a:hover{color: $medium-gray;}
+    .has-medium-gray-background-color{background-color: $medium-gray;}
+
+    .has-light-gray-color{color:$light-gray;}
+    .has-light-gray-color a{border-bottom-color: $light-gray;}
+    .has-light-gray-color a:hover{color: $light-gray;}
+    .has-light-gray-background-color{background-color: $light-gray;}
+
+    .has-white-color{color:$white;}
+    .has-white-color a{border-bottom-color: $white;}
+    .has-white-color a:hover{color: $white;}
+    .has-white-background-color{background-color: $white;}
 }
