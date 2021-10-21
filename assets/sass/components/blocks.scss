@@ -72,3 +72,8 @@
 :root .wp-block-buttons:not(.is-style-outline) .wp-block-button:not(.is-style-outline){
     border: none;
 }
+
+:root .is-style-outline > .wp-block-button__link, :root .wp-block-button__link.is-style-outline{
+    border: 2px solid;
+}
+
