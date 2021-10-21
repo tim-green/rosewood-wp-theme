@@ -717,3 +717,22 @@ p.has-drop-cap:not(:focus)::first-letter{
   }
 }
 
+input.search-field{
+  background: $rose url(assets/images/search.svg) no-repeat left center;
+  background-size: 26px auto;
+  border: none;
+  border-bottom: 1px solid $black;
+  border-radius: 0;
+  box-shadow: none;
+  color: $white;
+  font-size: 1em;
+  margin: 0;
+  outline: none;
+  padding: 18px 0 18px 40px;
+  appearance: none;
+
+  &::-webkit-input-placeholder, &:-ms-input-placeholder, &::-moz-placeholder{
+    color: $black;
+  }
+}
+
