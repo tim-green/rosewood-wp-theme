@@ -11,3 +11,16 @@
  
 }
 
+
+// max-width: 1240px
+@media (max-width: 1240px){
+
+  .entry-content{
+    .alignwide{
+      margin-left: calc(50% - 50vw + 190px);
+      max-width: calc(110vw - 380px);
+      width: calc(100vw - 380px);
+    }
+  }
+}
+
