@@ -90,6 +90,72 @@
   }
 }
 
+// max-width: 750px
+@media (max-width: 750px){
+  .site-nav{
+    .menus{
+      > ul{
+        float: none;
+        width: 100%;
+
+        & + ul{
+          margin: 40px 0 0;
+        }
+      }
+    }
+  }
+
+  .alignleft{
+    margin: 5px 25px 25px 0;
+  }
+
+  .alignright{
+    margin: 5px 0 25px 25px;
+  }
+
+  .alignnone{
+    max-width: 100%;
+  }
+
+  .alignnone, .aligncenter{
+    margin: 40px auto;
+  }
+
+  .gallery{
+    margin: 40px auto 20px;
+
+    + .gallery{
+      margin-top: -20px
+    }
+  }
+
+  .gallery-columns-1,.gallery-columns-2, .gallery-columns-3{
+    .gallery-caption{
+      bottom:10px;
+      @include fontSize(12px);
+      left: 20px;
+      max-width: calc( 100% - 40px);
+    }
+  }
+
+  //pull quotes
+  .entry-content .pull.left{
+    margin-left: 0;
+   }
+
+  .entry-content .pull.right{
+    margin-right: 0;
+   }
+
+   //comments
+   .comment-author{
+     .avatar{
+       left: 0;
+       width: 55px;
+     }
+   }
+}
+
 // max-width: 620px
 @media (max-width: 620px){
   .site-header{
