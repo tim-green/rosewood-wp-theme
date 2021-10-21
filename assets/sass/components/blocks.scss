@@ -121,3 +121,31 @@
 .entry-content .wp-block-file__button{
     flex-shrink: 0;
 }
+
+//4.6 Gallery
+.wp-block-gallery{
+    .blocks-gallery-image figcaption, .block-gallery-item figcaption{
+        color: $white;
+        margin: 0;
+        padding-bottom: 10px;
+    }
+}
+
+.entry-content{
+    .wp-block-gallery.alignfull{
+        padding: 0 1em;
+    }
+
+    ul.wp-block-gallery:not(.alignfull):not(.alignwidge){
+        margin-left: 0;
+    }
+
+    ul.wp-block-gallery > li:first-child{
+        margin-top: 0;
+    }
+
+    ul.wp-block-gallery > li:last-child{
+        margin-bottom: 16px;
+    }
+}
+
