@@ -1,12 +1,11 @@
 /*
 
   Pages
-  +
-
   + 1. Archive
     1.1 Archive Pagination
   + 2. Post Wrappers
   + 3. Post Previews
+    3.1 Post Type: Chat
   + 4. Singular Post
   + 5. Page Image
   + 6. Linked pages
@@ -165,6 +164,31 @@
         color: $rose;
        }
       }
+}
+
+//3.1 Post Type: Chat
+.tag-chat {
+  .entry-content {
+    p:nth-child(odd), p:nth-child(even){
+      padding: 8px;
+      border-radius: 8px;
+      margin: 6.5% 0;
+      color: $cream;
+
+      &:hover{
+        background: $deeprose;
+        transition: background $var-base-transition;
+      }
+    }
+
+    p:nth-child(odd){
+      background: rgba($rose, .85);
+    }
+
+    p:nth-child(even){
+      background: $rose;
+    }
+  }
 }
 
 // 4. Singular
