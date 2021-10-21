@@ -77,3 +77,19 @@
     border: 2px solid;
 }
 
+//4.3 Column
+.wp-block-column{
+    padding: 0 5px;
+}
+
+.wp-block-column {
+    > *:first-child{
+        margin-top: 0;
+    }
+
+    > *:last-child{
+        margin-bottom: 0;
+    }
+    
+}
+
