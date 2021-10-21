@@ -301,3 +301,14 @@
   margin-top: 50px;
 }
 
+.comments > {
+  .comment:first-of-type, .pingback:first-of-type{
+    margin-top: 0;
+  }
+}
+
+.comment{
+  .comment{
+    margin-left: 50px;
+  }
+}
