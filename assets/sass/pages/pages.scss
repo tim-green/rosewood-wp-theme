@@ -257,3 +257,23 @@
       }
     }
   }
+
+  .previous-post a{
+    padding-left: 25px;
+        &:before{
+          left: 0;
+          top: 0;
+          content: "\f060";
+          font-family: 'Font Awesome 5 Pro';
+        }
+    }
+    .next-post a{
+      padding-right: 25px;
+          &:before{
+            content: "\f061";
+            font-family: 'Font Awesome 5 Pro';
+            right: 0;
+            top: 0;
+          }
+      }
+}
