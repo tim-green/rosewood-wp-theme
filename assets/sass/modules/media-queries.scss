@@ -90,6 +90,143 @@
   }
 }
 
+// max-width: 620px
+@media (max-width: 620px){
+  .site-header{
+    padding: 26px 7.5%;
+  }
+  
+  .site-description{
+    display: none;
+  }
+
+  .mobile-menu-wrapper{
+    padding-top: 74px;
+  }
+
+  .site-nav{
+    padding-top: 124px;
+    padding-bottom: 40px;
+
+    ul{
+      &:first-child{
+        li{
+          @include fontSize(30px);
+        }
+      }
+      + ul{
+        li{
+          @include fontSize(20px);
+          font-weight: 400;
+
+          + li{
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+    footer{
+      display: none;
+    }
+  }
+
+  .mobile-search{
+    top: 74px
+  }
+
+  .entry-header{
+    margin: 50px auto;
+  }
+
+  .post-pagination{
+    margin-top: 50px;
+  }
+
+  .comments, .comment-respond, .related-posts{
+    margin-top:50px;
+  }
+
+  .entry-content{
+    p{
+      margin-bottom: 25px;
+    }
+
+    hr{
+      margin: 30px auto;
+    }
+
+    .pull.left, .pull.right{
+      float: none;
+      margin: 40px 0;
+      width: 100%;
+    }
+  }
+
+  .gallery{
+    left: calc(50% - 50vw);
+    margin: 40px auto 30px;
+    padding: 0 5px;
+    width: 100vw;
+
+    + .gallery{
+      margin-top: -30px;
+    }
+
+    .gallery-item{
+      margin-bottom: 10px;
+      padding: 0 5px;
+    }
+  }
+
+
+  .gallery-caption{
+    display: none;
+  }
+
+  .gallery-columns-2, .gallery-columns-3, .gallery-columns-4, .gallery-columns-5, .gallery-columns-6, .gallery-columns-7, .gallery-columns-8,.gallery-columns-9{
+    .gallery-item{
+      width: 50%;
+    }
+  }
+
+  .comments-pagination{
+    margin-top: 80px;
+  }
+
+  .comment-respond{
+    .comment-form-author, .comment-form-email{
+      float: none;
+      margin: 20px 0 0;
+      width: 100%;
+    }
+  }
+
+  .resume-template, .portfolio-template{
+    .entry-content{
+      padding-left: 0;
+    
+      h1,h2,h3,h4,h5,h6{
+        @include fontSize(20px);
+        margin: 50px 0  23px;
+        padding: 24px 0 0;
+      }
+    }
+  }
+
+  .site-footer{
+    display:block;
+    margin-top: 60px;
+    padding: 25px 0;
+
+    .copyright, .theme-by{
+      text-align: left;
+    }
+    .theme-by{
+      margin: 9px 0 0;
+    }
+  }
+}
+
 // max-width: 500px
 @media (max-width: 500px){
   body{
