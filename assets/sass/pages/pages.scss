@@ -14,6 +14,7 @@
   + 8. Comments
     8.1 Comments Pagination
     8.2 Comments Respond
+  + 9. Related Posts
 */
 
 // 1. Archive
@@ -512,5 +513,59 @@
 
 .comments .comment-respond .logged-in-as{
   margin-bottom: 30px;
+}
+
+//9. Related Posts
+.related-posts{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: -20px;
+}
+
+.related-post{
+  float:left;
+  margin-bottom: 25px;
+  width: calc(50% - 10px);
+  text-decoration: none;
+
+  &:hover{
+    border-bottom: $black;
+  }
+
+  .title{
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: 1.25;
+    margin: 0;
+    word-break: break-word;
+
+    span{
+      border-bottom: 1px solid transparent;
+      transition: border-color $var-base-transition;
+    }
+
+    &:hover{
+      color: $rose;
+      transition: color $var-base-transition;
+    }
+  }
+
+}
+
+.related-post-image{
+  background:rgba($black, .1);
+  margin-bottom: 10px;
+  
+  img{
+    display: none;
+  }
+
+  &:before{
+    content: "";
+    display: block;
+    padding-bottom: 62.5%;
+    width: 100%;
+  }
 }
 
