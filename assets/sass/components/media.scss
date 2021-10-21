@@ -1,0 +1,28 @@
+/*
+
+  Media
+  +
+
+*/
+
+figure{
+    margin: 0;
+}
+
+.wp-caption{
+    display: block;
+    max-width: 100%;
+}
+
+.gallery-caption, .wp-caption-text, :root figcaption{
+    font-size: .9em;
+    margin: 15px 0 0;
+}
+
+:root .gallery-caption, :root .wp-caption-text{
+    margin-bottom: 0;
+}
+
+.wp-caption-text{
+    color: rgba($black, .5);
+}
