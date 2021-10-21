@@ -1,3 +1,17 @@
 /*
   Blocks
+  + 1. Base Margins
 */
+
+// 1. Base Margins
+*[class*="_inner-container"] > *:first-child{
+    margin-top: 0;
+}
+
+*[class*="_inner-container"] > *:last-child{
+    margin-bottom: 0;
+}
+
+.wp-block-archives, .wp-block-button, .wp-block-buttons, .wp-block-categories, .wp-block-code, .wp-block-columns, .wp-block-cover, .wp-block-embed, .wp-block-gallery, .wp-block-group, .wp-block-image, .wp-block-latest-comments, .wp-block-latest-posts, .wp-block-media-text, .wp-block-preformatted, .wp-block-pullquote, .wp-block-social-links, .wp-block-quote, .wp-block-quote.is-large, .wp-block-quote.is-style-large, .wp-block-verse, .wp-block-video{
+    margin: 30 0;
+}
