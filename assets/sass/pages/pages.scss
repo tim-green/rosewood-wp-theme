@@ -11,6 +11,7 @@
   + 5. Page Image
   + 6. Linked pages
   + 7. Single Pagination
+  + 8. Comments
 */
 
 // 1. Archive
@@ -276,4 +277,12 @@
             top: 0;
           }
       }
+}
+
+// 8. Comments
+.comments, .comment-respond, .related-posts{
+  border-top: 1px solid rgba($black, 0.125);
+  margin: 100px auto 0;
+  padding: 30px 0 0 34.12%;
+  position: relative;
 }
