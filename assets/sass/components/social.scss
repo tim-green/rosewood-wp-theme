@@ -68,6 +68,20 @@ body.hide-social{
 
     }
 }
+
+.dark{
+    .social-menu{
+        a{
+            background: rgba($black,.25);
+            color: $white;
+
+            &:hover, .active{
+                background: $white;
+                color: $black;
+                text-decoration: none;
+            }
+        }
+    }
 }
 .no-js .social-menu .social-search-wrapper{ 
     display: none; 
