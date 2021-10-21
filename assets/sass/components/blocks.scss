@@ -149,3 +149,15 @@
     }
 }
 
+//4.7 Image
+.wp-block-image{
+    .aligncenter > figcaption,
+    .alignleft > figcaption,
+    .alignright > figcaption{
+        display: block;
+    }
+}
+
+.wp-block-image.is-resized{
+    display: block;
+}
