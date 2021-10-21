@@ -736,3 +736,33 @@ input.search-field{
   }
 }
 
+// Search Overlay
+.search-overlay{
+  align-items: center;
+  background: rgba($black, .65);
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  position: fixed;
+  bottom: 0;
+  left: -99999px;
+  right: 99999px;
+  top: 0;
+  transition: opacity .2s linear, left 0s .2s, right 0s .2s;
+  z-index: 100002;
+
+  &.active{
+    opacity: 1;
+    left: 380px;
+    right: 0;
+    transition: opacity .2s linear;
+  }
+
+  .search-field{
+    background-size: 44px auto;
+    border-bottom: none;
+    @include fontSize(32px);
+    padding: 24px 0 24px 69px;
+    width: 450px;
+  }
+}
