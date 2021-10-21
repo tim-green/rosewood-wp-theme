@@ -10,6 +10,7 @@
   + 4. Singular Post
   + 5. Page Image
   + 6. Linked pages
+  + 7. Single Pagination
 */
 
 // 1. Archive
@@ -213,3 +214,18 @@
   margin-top: 50px;
 }
 
+//7. Single Pagination
+.post-pagination{
+  display:flex;
+  @include fontSize(18px);
+  justify-content: space-between;
+  margin-top:100px;
+
+  div{
+    width: calc(50% - 15px);
+  }
+
+  div + div{
+    margin-left: 30px;
+    text-align: right;
+  }
