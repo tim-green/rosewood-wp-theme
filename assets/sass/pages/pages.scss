@@ -6,6 +6,7 @@
   + 1. Archive
     1.1 Archive Pagination
   + 2. Post Wrappers
+  + 3. Post Previews
 */
 
 // 1. Archive
@@ -99,3 +100,43 @@
     }
   }
 }
+
+//3. Post Previews
+.post-preview{
+  border-top: 1px solid $rose;
+  position: relative;
+
+  a{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    text-decoration: none;
+
+    &:hover{
+      text-decoration: none;
+    }
+  }
+
+  time{
+    color: rgba($black,0.4);
+    line-height: 1.25;
+    margin-left: 30px;
+    white-space: nowrap;
+  }
+}
+
+.post-preview a .title span{
+  border-bottom: 1px solid transparent;
+  transition: border-color .2s linear;
+
+  &:hover{
+    border-bottom-color: $black;
+  }
+}
+
+.post-preview.no-title{
+  a{
+    justify-content: flex-end;
+  }
+}
+
