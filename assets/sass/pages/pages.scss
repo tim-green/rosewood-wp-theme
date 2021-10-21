@@ -16,6 +16,7 @@
     8.2 Comments Respond
   + 9. Related Posts
   + 10. Entry Content
+    10.1 Pull Quotes
 */
 
 // 1. Archive
@@ -621,3 +622,28 @@ p.has-drop-cap:not(:focus)::first-letter{
 .post-feature-image{
   padding-bottom: 5.75%;
 }
+
+//10.1 Pull Quotes
+.entry-content{
+  .pull{
+    @include fontSize(29px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    width: 280px;
+  }
+
+  .pull.left{
+    float: left;
+    hanging-punctuation: first;
+    margin: 2px 25px 20px -80px;
+  }
+
+  .pull.right{
+    float:right;
+    hanging-punctuation: last;
+    margin: 2px -80px 25px 20px;
+    text-align: right;
+  }
+}
+
