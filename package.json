@@ -19,7 +19,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.19",
     "bootstrap": "4.6.0",
-    "cssnano": "^6.1.2",
+    "cssnano": "^7.0.1",
     "grunt": "^1.6.1",
     "grunt-browser-sync": "^2.2.0",
     "grunt-contrib-imagemin": "^4.0.0",
