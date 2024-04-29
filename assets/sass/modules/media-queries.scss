@@ -96,9 +96,11 @@
    padding-left: 0;
  }
 
+ $siteHeadcalc: 7.5% + 50;
+
  .site-header{
-   padding: 30px calc(7.5% + 50) 30px 7.5%;
-   position: relative;
+  padding: 30px #{calc($siteHeadcalc)} 30px 7.5%;   
+  position: relative;
    bottom: auto;
    left: auto;
    top: auto;
