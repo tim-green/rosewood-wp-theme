@@ -16,6 +16,12 @@ blockquote {
     padding: 20px;
     background: $rose;
     color: $white;
+    transition: ease-out .5s;
+    &:hover{
+        background: $white;
+        transition: ease-in .5s;
+        color: $rose;
+    }
 
     p{
         font-weight: 700;
