@@ -590,7 +590,10 @@
 .related-post-image{
   background:rgba($black, .1);
   margin-bottom: 10px;
-  
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: ease-out 500ms;
   img{
     display: none;
   }
@@ -600,6 +603,11 @@
     display: block;
     padding-bottom: 62.5%;
     width: 100%;
+  }
+
+  &:hover{
+    filter: grayscale(1);
+  transition: ease-in 500ms;
   }
 }
 
