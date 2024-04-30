@@ -3,7 +3,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
 	<!-- FA added -->
 	<script src="https://kit.fontawesome.com/c20cab8581.js" crossorigin="anonymous"></script>
 	<?php wp_head(); ?>
