@@ -72,8 +72,18 @@
 //4.1 Audio 
 .wp-block-audio audio{
     width: 100%;
+    background-color: $rose !important;
+    border-radius: 4px !important;
 }
 
+.mejs-container, .mejs-container .mejs-controls, .mejs-embed, .mejs-embed body{
+    background-color: $rose !important;
+    border-radius: 4px !important;
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-current{
+    background-color: $darker-gray !important;
+}
 //4.2 Buttons
 :root .wp-block-button__link{
     border: none;
