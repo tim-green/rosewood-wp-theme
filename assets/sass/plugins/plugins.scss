@@ -75,3 +75,38 @@
   padding: 0.30em 0.65em;
 }
 
+// 1.2 Ninja Form
+.nf-form-content{
+  .nf-field-element{
+    .ninja-forms-field{
+      label{
+        font-weight: bold;
+      }
+      
+      input, textarea{
+        border-color: $rose;
+      }
+      
+      textarea{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// 1.3 WPForms
+.wpforms-container{
+    .wpforms-field-container{
+    label{
+      font-weight: bold;
+    }
+    
+    input, textarea{
+      border-color: $rose;
+    }
+    
+    textarea{
+      margin-bottom: 0;
+    }
+  }
+}
