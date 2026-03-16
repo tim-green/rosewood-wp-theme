@@ -5,6 +5,8 @@
 
 */
 
+@use '../modules/variables' as *;
+@use '../modules/mixins' as *;
 .site-footer{
   border-top: 1px solid rgba($black,.125);
   display: flex;

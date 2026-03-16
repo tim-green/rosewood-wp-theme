@@ -4,6 +4,9 @@
   +
 
 */
+
+@use '../modules/variables' as *;
+@use '../modules/mixins' as *;
 @media ( prefers-reduced-motion: reduce ) {
 	* {
 		animation-duration: 0s !important;

@@ -12,13 +12,13 @@
 */
 
 
-@import "modules/mixins";
-@import "modules/variables";
-@import "modules/wp-default";
-@import "modules/animation";
-@import "modules/accessiblity";
-@import "modules/base";
-@import "modules/typography";
+@use "modules/mixins";
+@use "modules/variables";
+@use "modules/wp-default";
+@use "modules/animation";
+@use "modules/accessiblity";
+@use "modules/base";
+@use "modules/typography";
 
 /*
 
@@ -26,7 +26,7 @@
 
 */
 
-@import "plugins/plugins";
+@use "plugins/plugins";
 
 
 /*
@@ -35,13 +35,13 @@
 
 */
 
-@import "components/components";
-@import "components/table";
-@import "components/block-quotes";
-@import "components/media";
-@import "components/social";
-@import "components/blocks";
-@import "components/gallery";
+@use "components/components";
+@use "components/table";
+@use "components/block-quotes";
+@use "components/media";
+@use "components/social";
+@use "components/blocks";
+@use "components/gallery";
 
 /*
 
@@ -49,9 +49,9 @@
 
 */
 
-@import "sections/header";
-@import "sections/main";
-@import "sections/footer";
+@use "sections/header";
+@use "sections/main";
+@use "sections/footer";
 
 
 /*
@@ -60,7 +60,7 @@
 
 */
 
-@import "pages/pages";
+@use "pages/pages";
 
 
 /*
@@ -69,4 +69,4 @@
 
 */
 
-@import "modules/media-queries";
+@use "modules/media-queries";

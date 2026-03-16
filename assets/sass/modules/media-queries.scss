@@ -5,6 +5,8 @@
 
 */
 
+@use '../modules/variables' as *;
+@use '../modules/mixins' as *;
 // max-width: 2500px
 @media (max-width: 2500px){
 

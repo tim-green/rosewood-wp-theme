@@ -8,6 +8,8 @@
 
 */
 
+@use '../modules/variables' as *;
+@use '../modules/mixins' as *;
 // 1.1 Contact Form 7
 .wpcf7-form{
   label{

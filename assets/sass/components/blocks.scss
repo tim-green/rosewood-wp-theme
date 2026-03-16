@@ -18,6 +18,8 @@
     4.11 Quote
 */
 
+@use '../modules/variables' as *;
+@use '../modules/mixins' as *;
 // 1. Base Margins
 *[class*="_inner-container"] > *:first-child{
     margin-top: 0;

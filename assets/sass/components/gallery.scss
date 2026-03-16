@@ -6,6 +6,8 @@
 */
 
 
+@use '../modules/variables' as *;
+@use '../modules/mixins' as *;
 //Galleries
 .gallery{
     display: flex;
