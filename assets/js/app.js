@@ -12,3 +12,4 @@ import '../sass/app.scss'
 
 // Build the main JS file
 // ... other js files imports
+import '../js/vendor/rosewood-var.js'
