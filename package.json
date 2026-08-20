@@ -17,7 +17,7 @@
   "dependencies": {
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.16",
+    "autoprefixer": "^10.5.4",
     "pixrem": "^5.0.0",
     "postcss": "^8.4.32",
     "lightningcss": "^1.30.1",
