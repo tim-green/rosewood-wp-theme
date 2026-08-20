@@ -19,9 +19,9 @@
   "devDependencies": {
     "autoprefixer": "^10.5.4",
     "pixrem": "^5.0.0",
-    "sass-embedded": "^1.92.1",
     "postcss": "^8.5.26",
     "lightningcss": "^1.33.0",
+    "sass-embedded": "^1.102.0",
     "vite": "^8.2.2"
   }
 }
