@@ -19,7 +19,7 @@
   "devDependencies": {
     "autoprefixer": "^10.6.1",
     "pixrem": "^5.0.0",
-    "postcss": "^8.5.26",
+    "postcss": "^8.5.28",
     "lightningcss": "^1.33.0",
     "sass-embedded": "^1.104.1",
     "vite": "^8.3.0"
